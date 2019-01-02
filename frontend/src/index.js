@@ -5,7 +5,7 @@ import './index.css';
 class Square extends React.Component {
   render() {
     return (
-      <button className="square" onClick={() => alert('click')}>
+      <button className="square" onClick={() => this.props.onClick()}>
         {this.props.value}
       </button>
     );
@@ -13,12 +13,32 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            squares : Array(9).fill(null),
+            xIsNext: true
+        }
+    }
+
   renderSquare(i) {
-    return <Square value={i}/>;
+    return <Square
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+    />;
+  }
+
+  handleClick(i) {
+      const squares = this.state.squares.slice();
+      squares[i] = this.state.xIsNext ? 'X' : 'O';
+      this.setState({
+          squares : squares,
+          xIsNext : !this.state.xIsNext
+      });
   }
 
   render() {
-    const status = 'Next player: X';
+    const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
 
     return (
       <div>
