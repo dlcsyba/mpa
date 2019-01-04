@@ -17,7 +17,7 @@ class NavBar extends Component {
                                 </li>
         
                                 <li className="has-submenu">
-                                    <Link to="#"><i className="md md-palette "/><span> Elements </span> </Link>
+                                    <a href="#"><i className="md md-palette "/><span> Elements </span> </a>
                                     <ul className="submenu">
                                         <li><Link to="/elements/typography">Typography</Link></li>
                                         <li><Link to="/elements/buttons">Buttons</Link></li>
@@ -33,7 +33,7 @@ class NavBar extends Component {
                                 </li>
         
                                 <li className="has-submenu">
-                                    <Link to="#"><i className="md md-invert-colors-on"/> <span> Components </span> </Link>
+                                    <a href="#"><i className="md md-invert-colors-on"/> <span> Components </span> </a>
                                     <ul className="submenu">
                                         <li><Link to="/components/grid">Grid</Link></li>
                                         <li><Link to="/components/portlets">Portlets</Link></li>
@@ -47,7 +47,7 @@ class NavBar extends Component {
                                 </li>
         
                                 <li className="has-submenu">
-                                    <Link to="#"><i className="md md-redeem"/> <span> Other </span> </Link>
+                                    <a href="#"><i className="md md-redeem"/> <span> Other </span> </a>
                                     <ul className="submenu">
                                         <li className="has-submenu">
                                             <Link to="#">Icons</Link>
@@ -73,7 +73,7 @@ class NavBar extends Component {
                                         </li>
         
                                         <li className="has-submenu">
-                                            <Link to="#">Tables</Link>
+                                            <a href="#">Tables</a>
                                             <ul className="submenu">
                                                 <li><Link to="/tables/tables">Basic Tables</Link></li>
                                                 <li><Link to="/tables/table-datatable">Data Table</Link></li>
@@ -83,7 +83,7 @@ class NavBar extends Component {
                                         </li>
         
                                         <li className="has-submenu">
-                                            <Link to="#">Charts</Link>
+                                            <a href="#">Charts</a>
                                             <ul className="submenu">
                                                 <li><Link to="/charts/morris-chart">Morris Chart</Link></li>
                                                 <li><Link to="/charts/chartjs">Chartjs</Link></li>
@@ -96,7 +96,7 @@ class NavBar extends Component {
                                         </li>
         
                                         <li className="has-submenu">
-                                            <Link to="#">Maps</Link>
+                                            <a href="#">Maps</a>
                                             <ul className="submenu">
                                                 <li><Link to="/maps/gmap"> Google Map</Link></li>
                                                 <li><Link to="/maps/vector-map"> Vector Map</Link></li>
@@ -104,7 +104,7 @@ class NavBar extends Component {
                                         </li>
         
                                         <li className="has-submenu">
-                                            <Link to="#">Mail</Link>
+                                            <a href="#">Mail</a>
                                             <ul className="submenu">
                                                 <li><Link to="/mail/inbox">Inbox</Link></li>
                                                 <li><Link to="/mail/email-compose">Compose Mail</Link></li>
@@ -115,7 +115,7 @@ class NavBar extends Component {
                                 </li>
         
                                 <li className="has-submenu">
-                                    <Link to="#"><i className="md md-pages"/><span>Pages </span> </Link>
+                                    <a href="#"><i className="md md-pages"/><span>Pages </span> </a>
                                     <ul className="submenu megamenu">
                                         <li>
                                             <ul>
@@ -150,18 +150,18 @@ class NavBar extends Component {
                                 <li>
                                     <form role="search" className="navbar-left app-search pull-left hidden-xs">
                                          <input type="text" placeholder="Search..." className="form-control"/>
-                                        <Link to="#"><i className="fa fa-search"/></Link>
+                                        <a href="#"><i className="fa fa-search"/></a>
                                     </form>
                                 </li>
                                 <li className="dropdown hidden-xs">
-                                    <Link to="#" data-target="#" className="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
+                                    <a href="#" data-target="#" className="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i className="md md-notifications"/> <span className="badge badge-xs badge-danger">3</span>
-                                    </Link>
+                                    </a>
                                     <ul className="dropdown-menu dropdown-menu-lg">
                                         <li className="text-center notifi-title">Notification</li>
                                         <li className="list-group">
                                            {/*list item*/}
-                                           <Link to="javascript:void(0);" className="list-group-item">
+                                           <a href="javascript:void(0);" className="list-group-item">
                                               <div className="media">
                                                  <div className="pull-left">
                                                     <em className="fa fa-user-plus fa-2x text-info"/>
@@ -173,8 +173,8 @@ class NavBar extends Component {
                                                     </p>
                                                  </div>
                                               </div>
-                                           </Link>
-                                            <Link to="javascript:void(0);" className="list-group-item">
+                                           </a>
+                                            <a href="javascript:void(0);" className="list-group-item">
                                               <div className="media">
                                                  <div className="pull-left">
                                                     <em className="fa fa-diamond fa-2x text-primary"/>
@@ -186,8 +186,8 @@ class NavBar extends Component {
                                                     </p>
                                                  </div>
                                               </div>
-                                            </Link>
-                                            <Link to="javascript:void(0);" className="list-group-item">
+                                            </a>
+                                            <a href="javascript:void(0);" className="list-group-item">
                                               <div className="media">
                                                  <div className="pull-left">
                                                     <em className="fa fa-bell-o fa-2x text-danger"/>
@@ -200,37 +200,37 @@ class NavBar extends Component {
                                                     </p>
                                                  </div>
                                               </div>
-                                            </Link>
-                                            <Link to="javascript:void(0);" className="list-group-item">
+                                            </a>
+                                            <a href="javascript:void(0);" className="list-group-item">
                                               <small>See all notifications</small>
-                                            </Link>
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
         
                                 <li className="dropdown user-box">
-                                    <Link to="" className="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
+                                    <a href="" className="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
                                         <img src={{avatar_1}} style={{height: '60px'}} alt="user-img" className="img-circle user-img"/>
                                         <div className="user-status away"><i className="zmdi zmdi-dot-circle"/></div>
-                                    </Link>
+                                    </a>
         
                                     <ul className="dropdown-menu">
-                                        <li><Link to="javascript:void(0)"><i className="md md-face-unlock"/> 信息</Link></li>
-                                        <li><Link to="javascript:void(0)"><i className="md md-settings"/> 设置</Link></li>
-                                        <li><Link to="javascript:void(0)"><i className="md md-lock"/> 锁定</Link></li>
-                                        <li><Link to="javascript:void(0)"><i className="md md-settings-power"/> 登出</Link></li>
+                                        <li><a href="javascript:void(0)"><i className="md md-face-unlock"/> 信息</a></li>
+                                        <li><a href="javascript:void(0)"><i className="md md-settings"/> 设置</a></li>
+                                        <li><a href="javascript:void(0)"><i className="md md-lock"/> 锁定</a></li>
+                                        <li><a href="javascript:void(0)"><i className="md md-settings-power"/> 登出</a></li>
                                     </ul>
                                 </li>
                             </ul>
                             <div className="menu-item">
                                 {/*Mobile menu toggle*/}
-                                <Link className="navbar-toggle">
+                                <a className="navbar-toggle">
                                     <div className="lines">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                     </div>
-                                </Link>
+                                </a>
                                 {/*End mobile menu toggle*/}
                             </div>
                         </div>
