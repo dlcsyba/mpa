@@ -6,12 +6,14 @@ import Footer from './components/footer';
 import Home from './components/home';
 import './App.css';
 import Grid from "./components/grid";
+import MaterialDesign from './components/icons/material';
 
 const Main = () => (
   <main>
     <Switch>
       <Route exact path='/' component={Home} />
       <Route path='/components/grid' component={Grid} />
+      <Route path='/icons/material-icon' component={MaterialDesign} />
       {/*<Route path='/schedule' component={Schedule}/>*/}
     </Switch>
   </main>

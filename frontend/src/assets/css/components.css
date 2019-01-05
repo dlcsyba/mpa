@@ -237,6 +237,7 @@ File: Components
 }
 .panel .panel-body {
   padding: 20px;
+  background-color: white;
 }
 .panel .panel-body p {
   margin: 0px;

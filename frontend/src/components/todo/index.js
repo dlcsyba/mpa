@@ -70,8 +70,8 @@ class ToDo extends Component {
     }
 
     render() {
-        let todoList = this.state.todoList.map(item => {
-            return <ToDoItem id={item.id} text={item.text} done={item.done}/>;
+        let todoList = this.state.todoList.map((item, index) => {
+            return <ToDoItem id={item.id} text={item.text} done={item.done} key={'toDoItem_' + index}/>;
         });
 
         return (
@@ -91,7 +91,7 @@ class ToDo extends Component {
                         </div>
                     </div>
 
-                    <ul className="list-group no-margn nicescroll todo-list" style={{'max-height': '288px'}}>
+                    <ul className="list-group no-margn nicescroll todo-list" style={{'maxHeight': '288px'}}>
                         {todoList}
                     </ul>
 

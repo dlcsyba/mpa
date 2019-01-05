@@ -33,7 +33,7 @@ File: Menu
   left: 0;
   top: 0;
   z-index: 1030;
-  background-color: transparent;
+  background-color: #6c757d;
   border: 0;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -496,7 +496,7 @@ File: Menu
 .footer {
   border-top: 1px solid rgba(33, 33, 33, 0.1);
   bottom: 0px;
-  color: #58666e;
+  color: #e9ecef;
   text-align: left !important;
   padding: 20px 0px;
   position: absolute;
@@ -508,7 +508,7 @@ File: Menu
   padding-right: 10px;
 }
 .footer ul li a {
-  color: #797979;
+  color: #e9ecef;
 }
 .footer ul li a:hover {
   color: #6e8cd7;

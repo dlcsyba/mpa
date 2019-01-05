@@ -37,9 +37,9 @@ class Inbox extends Component {
             date : '9:56 AM'
         }];
 
-        const listItems = itemList.map((item) =>
-                            <InboxItem author={item.author} itemText={item.text} itemDate={item.date}/>
-                        );
+        const listItems = itemList.map((item, index) =>
+            <InboxItem author={item.author} itemText={item.text} itemDate={item.date} key={'indexBox_' + index}/>
+        );
 
         return (
             <div className="panel panel-default">

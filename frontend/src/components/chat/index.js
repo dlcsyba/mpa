@@ -31,11 +31,7 @@ class Chat extends Component {
             time: '10:02'
         }];
 
-        let itemList = [];
-        for (let i = 0; i < list.length; i++) {
-            let item = list[i];
-            itemList.push(<ChatItem user={item.userName} content={item.content} time={item.time} index={i}/>);
-        }
+        let itemList = list.map((item, index) => <ChatItem user={item.userName} content={item.content} time={item.time} index={index} key={'chatItem_' + index}/>);
 
         return (
             <div className="panel panel-default">
