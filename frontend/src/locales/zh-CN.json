@@ -1,0 +1,9 @@
+{
+  "BOOK_NAME": "书名",
+  "AUTHOR": "作者",
+  "BEGIN_DATE": "开始日期",
+  "END_DATE": "结束日期",
+  "QUERY": "查询",
+  "RESET": "重置",
+  "BOOK_LIST": "书籍列表"
+}

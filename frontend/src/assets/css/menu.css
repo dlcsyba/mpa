@@ -25,7 +25,7 @@ File: Menu
   line-height: 1;
 }
 .wrapper {
-  margin-top: 148px;
+  margin-top: 88px;
 }
 #topnav {
   position: fixed;
@@ -57,6 +57,11 @@ File: Menu
   top: 12px;
   right: 7px;
 }
+
+.navbar-nav {
+    flex-direction: row;
+}
+
 #topnav .topbar-main .nav > li > a {
   color: #ffffff !important;
   line-height: 60px;
@@ -506,6 +511,7 @@ File: Menu
 .footer ul li {
   padding-left: 10px;
   padding-right: 10px;
+  display: inline-block;
 }
 .footer ul li a {
   color: #e9ecef;

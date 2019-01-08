@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
+import * as i18n from 'react-intl-universal';
 import logo from './logo.svg';
 import NavBar from './components/navbar';
 import Footer from './components/footer';
@@ -7,6 +8,13 @@ import Home from './components/home';
 import './App.css';
 import Grid from "./components/grid";
 import MaterialDesign from './components/icons/material';
+import Ion from './components/icons/ion';
+import BookPurchaseList from './pages/bookpurchaselist';
+
+const locales = {
+  "en-US": require('./locales/en-US.json'),
+  "zh-CN": require('./locales/zh-CN.json'),
+};
 
 const Main = () => (
   <main>
@@ -14,18 +22,37 @@ const Main = () => (
       <Route exact path='/' component={Home} />
       <Route path='/components/grid' component={Grid} />
       <Route path='/icons/material-icon' component={MaterialDesign} />
+      <Route path='/icons/ion-icons' component={Ion} />
+      <Route path='/book-purchase-list' component={BookPurchaseList} />
       {/*<Route path='/schedule' component={Schedule}/>*/}
     </Switch>
   </main>
 );
 
 class App extends Component {
+    state = {initDone: false};
+
     constructor(props) {
         super(props);
     }
 
+    componentDidMount() {
+        this.loadLocales();
+    }
+
+    loadLocales() {
+        i18n.init({
+            currentLocale: 'en-US',
+            locales,
+        })
+        .then(() => {
+            this.setState({initDone: true});
+        });
+    }
+
     render() {
         return (
+            this.state.initDone &&
             <div className="App">
                 <NavBar />
                 <Main />

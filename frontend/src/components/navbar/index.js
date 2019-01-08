@@ -142,6 +142,20 @@ class NavBar extends Component {
                                         </li>
                                     </ul>
                                 </li>
+
+                                <li className="has-submenu">
+                                    <a href="#"><i className="md md-pages"/><span>资产管理 </span> </a>
+                                    <ul className="submenu">
+                                        <li><Link to="/book-purchase-list">购书清单</Link></li>
+                                    </ul>
+                                </li>
+
+                                <li className="has-submenu">
+                                    <a href="#"><i className="md md-pages"/><span>开发工具 </span> </a>
+                                    <ul className="submenu">
+
+                                    </ul>
+                                </li>
                             </ul>
                             {/*End navigation menu*/}
                         </div>
