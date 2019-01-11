@@ -9,11 +9,13 @@ import './App.css';
 import Grid from "./components/grid";
 import MaterialDesign from './components/icons/material';
 import Ion from './components/icons/ion';
+import FontAwesome from './components/icons/fontawesome';
+import Typography from './elements/typography';
 import BookPurchaseList from './pages/bookpurchaselist';
 
 const locales = {
-  "en-US": require('./locales/en-US.json'),
-  "zh-CN": require('./locales/zh-CN.json'),
+  "en-US": require('./locales/en.json'),
+  "zh-CN": require('./locales/zh.json'),
 };
 
 const Main = () => (
@@ -23,6 +25,8 @@ const Main = () => (
       <Route path='/components/grid' component={Grid} />
       <Route path='/icons/material-icon' component={MaterialDesign} />
       <Route path='/icons/ion-icons' component={Ion} />
+      <Route path='/icons/font-awesome' component={FontAwesome} />
+      <Route path='/elements/typography' component={Typography} />
       <Route path='/book-purchase-list' component={BookPurchaseList} />
       {/*<Route path='/schedule' component={Schedule}/>*/}
     </Switch>

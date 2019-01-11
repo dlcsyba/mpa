@@ -57,9 +57,19 @@ class BookPurchaseList extends Component {
                             <h3 className="panel-title">{ i18n.get('BOOK_LIST') }</h3>
                         </div>
                         <div className="panel-body">
-                            <DataGrid colModal={colModal} showLineNumber={true} source=''/>
+                            <DataGrid colModel={colModal} showLineNumber={true} source=''/>
                         </div>
                     </div>
+                    {/*<div className="panel panel-fixed">*/}
+                        {/*<div className="panel-heading">*/}
+                            {/*<span className="panel-heading-button pull-right"><i*/}
+                                {/*className="ion-chevron-up"></i></span>*/}
+                            {/*<h3 className="panel-title">COMMON_DETAIL</h3>*/}
+                        {/*</div>*/}
+                        {/*<div className="panel-body" style={{display: 'none'}}>*/}
+
+                        {/*</div>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         );

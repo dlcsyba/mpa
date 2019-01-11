@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/css/core.css';
@@ -10,11 +12,16 @@ import './assets/css/menu.css';
 import './assets/css/responsive.css';
 import './index.css';
 import App from './App';
+import rootReducers from './reducers';
+
+const store = createStore(rootReducers);
 
 ReactDOM.render(
-    <BrowserRouter basename='/mpa'>
-        <App />
-    </BrowserRouter>,
+    <Provider store={store}>
+        <BrowserRouter basename='/mpa'>
+            <App />
+        </BrowserRouter>
+    </Provider>,
 
     document.getElementById('root')
 );
