@@ -11,7 +11,7 @@ import MaterialDesign from './components/icons/material';
 import Ion from './components/icons/ion';
 import FontAwesome from './components/icons/fontawesome';
 import Typography from './elements/typography';
-import BookPurchaseList from './pages/bookpurchaselist';
+import BookPurchaseList from './containers/bookpurchaselist';
 
 const locales = {
   "en-US": require('./locales/en.json'),

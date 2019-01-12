@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import * as i18n from 'react-intl-universal';
-import DataGrid from '../../components/datagrid'
+import DataGrid from '../../components/datagrid/index'
 
 class BookPurchaseList extends Component {
     render() {

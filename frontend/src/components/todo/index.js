@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class ToDo extends Component {
     constructor(props) {
@@ -71,7 +72,7 @@ class ToDo extends Component {
 
     render() {
         let todoList = this.state.todoList.map((item, index) => {
-            return <ToDoItem id={item.id} text={item.text} done={item.done} key={'toDoItem_' + index}/>;
+            return <ToDoItem id={item.id} text={item.text} completed={item.done} key={'toDoItem_' + index} onChange={}/>;
         });
 
         return (
@@ -114,26 +115,21 @@ class ToDo extends Component {
     }
 }
 
-class ToDoItem extends Component {
-    render() {
-        const {id, text, done=false} = this.props;
-        let checkbox = null;
-        if (done) {
-            checkbox = <input className="todo-done" id={id} type="checkbox" checked/>;
-        }
-        else {
-            checkbox = <input className="todo-done" id={id} type="checkbox"/>;
-        }
+const ToDoItem = ({id, text, completed, onChange}) => (
+    <li className="list-group-item">
+        <div className="checkbox checkbox-primary">
+            {<input className="todo-done" id={ id } type="checkbox" checked={ completed } onChange={ onChange }/>}
+            <label htmlFor={ id }>{ text }</label>
+        </div>
+    </li>
+);
 
-        return (
-            <li className="list-group-item">
-                <div className="checkbox checkbox-primary">
-                    {checkbox}
-                    <label htmlFor={id}>{text} </label>
-                </div>
-            </li>
-        );
-    }
-}
+ToDoItem.propTypes = {
+    id: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired
+};
+
 
 export default ToDo;
