@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import {connect} from 'react-redux';
 import * as i18n from 'react-intl-universal';
 import logo from './logo.svg';
 import NavBar from './components/navbar';
@@ -66,4 +67,8 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return state
+};
+
+export default connect(mapStateToProps)(App);
